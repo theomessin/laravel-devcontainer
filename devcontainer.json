@@ -1,0 +1,16 @@
+{
+    "name": "Laravel",
+    "service": "cli",
+    "remoteUser": "user",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workspaces/laravel",
+    "dockerComposeFile": "docker-compose.yaml",
+
+    "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "mikestead.dotenv",
+        "onecentlin.laravel-blade"
+    ]
+}
