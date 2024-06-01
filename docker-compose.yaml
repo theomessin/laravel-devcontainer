@@ -20,12 +20,11 @@ services:
     depends_on:
       - fpm
 
-  postgres:
-    image: postgres:13-alpine
+  mysql:
+    image: mysql:8
     environment:
-      POSTGRES_DB: laravel
-      POSTGRES_USER: root
-      POSTGRES_HOST_AUTH_METHOD: trust
+      MYSQL_DATABASE: laravel
+      MYSQL_ALLOW_EMPTY_PASSWORD: affirm
 
   redis:
     image: redis:6.2-alpine
