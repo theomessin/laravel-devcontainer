@@ -21,12 +21,11 @@ services:
       - fpm
 
   postgres:
-    image: postgres:13-alpine
+    image: postgres:16.3-alpine
     environment:
       POSTGRES_DB: laravel
       POSTGRES_USER: root
       POSTGRES_HOST_AUTH_METHOD: trust
 
   redis:
-    image: redis:6.2-alpine
-
+    image: redis:7.2-alpine
