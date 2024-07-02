@@ -27,5 +27,15 @@ services:
       POSTGRES_USER: root
       POSTGRES_HOST_AUTH_METHOD: trust
 
+  pgadmin:
+    image: dpage/pgadmin4:8.9
+    ports:
+      - 8080:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "root@email.com"
+      PGADMIN_DEFAULT_PASSWORD: "password"
+    depends_on:
+      - postgres
+
   redis:
     image: redis:7.2-alpine
