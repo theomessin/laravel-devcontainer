@@ -17,6 +17,7 @@ Any Extensions will also run in the same container, meaning that intellisense wi
 - `php:8.3-fpm-alpine` container with pgsql and redis extensions.
 - `nginx:1.27-alpine` preconfigured for your Laravel application.
 - `postgres:16.3-alpine` preconfigured with the default Laravel credentials.
+- `pgadmin4:8.9` container with pgAdmin.
 - `redis:7.2-alpine` for caching, queues, sessions, etc.
 
 #### Easy Installation
@@ -59,6 +60,10 @@ REDIS_PORT=6379
 You may then navigate to [`localhost`](http://localhost) on your local machine. Fingers crossed, you will see your Laravel application!
 Run any artisan or composer commands using the Visual Studio Code [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
 As such, you do not need anything else installed on your host machine!
+
+#### pgAdmin
+
+[`pgAdmin`](https://www.pgadmin.org/) can be accessed via [`localhost:8080`](http://localhost:8080). After signing in with the credentials defined in `docker-compose.yaml`, to connect to your Postgres container, set the "Host name/address" as `postgres`, and the "Username" as `root`. There is no need to set a password, as the Postgres container is running as `POSTGRES_HOST_AUTH_METHOD: trust`.
 
 #### Extensions
 
